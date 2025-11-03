@@ -1,17 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Emma Nails — Nail Salon</title>
-  <meta name="description" content="Emma Nails — a modern nail salon offering manicures, gel, nail art, and spa pedicures. Book online or by WhatsApp. Open 7 days." />
-  <meta name="theme-color" content="#F3EEE6" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ES Studio — Nail Salon</title>
+ <link rel="icon" type="image/png" href="gallery/logo.jpg">
+<meta content="ES Studio — a modern nail salon offering manicures, gel, nail art, and spa pedicures. Book online or by WhatsApp. Open 7 days." name="description"/>
+<meta content="#F3EEE6" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Tailwind CSS (CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
   tailwind.config = {
     theme: {
       extend: {
@@ -53,7 +56,7 @@
     background-position: 0 88%;
   }
 </style>
-  <style>
+<style>
     /* Smooth scrolling */
     html { scroll-behavior: smooth; }
     /* Fancy underline utility */
@@ -61,431 +64,516 @@
   </style>
 </head>
 <body class="bg-sand-50 text-charcoal-900 antialiased">
-  <!-- Announcement bar -->
-  <div class="bg-sand-100 text-charcoal-800 text-sm text-center py-2 px-4">
-    <span class="font-medium">Grand opening offer:</span> 10% off gel sets this month — use code <span class="font-semibold">Emma10</span>
+<!-- Announcement bar -->
+<div class="bg-sand-100 text-charcoal-800 text-sm text-center py-2 px-4">
+<span class="font-medium">Grand opening offer:</span> 10% off gel sets this month — use code <span class="font-semibold">Emma10</span>
+</div>
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-sand-50/80 backdrop-blur supports-[backdrop-filter]:bg-sand-50/65 shadow-soft">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<a class="flex items-center gap-3" href="#">
+<div class="w-9 h-9 rounded-full bg-sand-200 ring-2 ring-white flex items-center justify-center">
+<svg class="w-5 h-5 text-charcoal-800" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 12c2.5-1.5 4.5-5 6-10 1.5 5 3.5 8.5 6 10-2.5 1.5-4.5 5-6 10-1.5-5-3.5-8.5-6-10Z" stroke="currentColor" stroke-width="1.2"></path>
+</svg>
+</div>
+<span class="font-serif text-xl tracking-wide">ES Studio</span>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-sm">
+<a class="hover:text-accent" href="#services">Services</a>
+<a class="hover:text-accent" href="#pricing">Pricing</a>
+<a class="hover:text-accent" href="#gallery">Gallery</a>
+<a class="hover:text-accent" href="#team">Team</a>
+<a class="hover:text-accent" href="#faq">FAQ</a>
+<a class="hover:text-accent" href="#contact">Contact</a>
+</nav>
+<div class="hidden md:flex items-center gap-3">
+<a class="hidden lg:inline-flex items-center gap-2 rounded-full border border-blush-300 px-4 py-2 text-sm hover:bg-blush-50" href="https://wa.me/+32492793458">
+<span>WhatsApp</span>
+</a>
+<a class="inline-flex items-center gap-2 rounded-full bg-charcoal-900 text-white px-4 py-2 text-sm hover:bg-charcoal-800" href="https://salonkee.be/salon/es-studio?lang=fr">
+<span>Book Now</span>
+<svg class="w-4 h-4" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</a>
+</div>
+<button class="md:hidden inline-flex items-center justify-center p-2 rounded-md ring-1 ring-sand-300" id="menuBtn">
+<span class="sr-only">Open menu</span>
+<svg class="w-6 h-6" id="menuIcon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" fill="currentColor"></path></svg>
+</button>
+</div>
+</div>
+<div class="md:hidden hidden border-t border-sand-300 bg-sand-50" id="mobileMenu">
+<nav class="px-4 py-3 space-y-2">
+<a class="block py-2" href="#services">Services</a>
+<a class="block py-2" href="#pricing">Pricing</a>
+<a class="block py-2" href="#gallery">Gallery</a>
+<a class="block py-2" href="#team">Team</a>
+<a class="block py-2" href="#faq">FAQ</a>
+<a class="block py-2" href="#contact">Contact</a>
+<a class="block py-2 font-medium text-charcoal-900" href="#booking">Book Now</a>
+</nav>
+</div>
+</header>
+<!-- Hero -->
+<section class="relative bg-hero-texture bg-cover bg-center">
+<div aria-hidden="true" class="absolute inset-0"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="py-20 sm:py-28 md:py-32 text-white">
+<span class="inline-block px-3 py-1 rounded-full bg-sand-50/20 text-xs tracking-wide mb-5">New • Autumn Palette</span>
+<h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">Elegance at your fingertips</h1>
+<p class="mt-4 max-w-2xl text-white/90">Nails gel, Pédicure, Brows, Lashes &amp; Formation Disponible.</p>
+<div class="mt-8 flex flex-col sm:flex-row gap-3">
+<a class="inline-flex items-center justify-center rounded-full bg-sand-200 text-charcoal-900 px-6 py-3 font-medium hover:bg-sand-200 shadow-soft" href="#booking">Book an appointment</a>
+<a class="inline-flex items-center justify-center rounded-full bg-sand-50/10 px-6 py-3 font-medium ring-1 ring-white/40 hover:bg-sand-50/20" href="#services">Explore services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust badges -->
+<section class="py-10 sm:py-12 bg-sand-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+<div class="p-4">
+<p class="text-2xl">★ ★ ★ ★ ★</p>
+<p class="text-sm text-charcoal-600 mt-1">500+ Five‑star reviews</p>
+</div>
+<div class="p-4">
+<p class="text-2xl">100% Vegan</p>
+<p class="text-sm text-charcoal-600 mt-1">Cruelty‑free brands</p>
+</div>
+<div class="p-4">
+<p class="text-2xl">BIAB • Gel</p>
+<p class="text-sm text-charcoal-600 mt-1">Long‑lasting sets</p>
+</div>
+<div class="p-4">
+<p class="text-2xl">Hygiene+</p>
+<p class="text-sm text-charcoal-600 mt-1">Medical‑grade tools</p>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="py-16 sm:py-20 bg-sand-50" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="sm:flex sm:items-end sm:justify-between">
+<div>
+<h2 class="font-serif text-3xl sm:text-4xl">Nos Services</h2>
+<p class="text-charcoal-600 mt-2 max-w-2xl">From quick tidy‑ups to show‑stopping sets. Choose the finish and length; we’ll handle the shine.</p>
+</div>
+<a class="mt-4 sm:mt-0 inline-flex items-center gap-2 text-charcoal-800 hover:underline" href="#pricing">See pricing
+          <svg class="w-4 h-4" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</a>
+</div>
+<div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+<!-- Card -->
+<article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
+  <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
+    <img alt="Manicure" class="w-full h-full object-cover" src="/gallery/nailsSqure.jpg"/>
   </div>
+  <h3 class="mt-4 font-medium text-lg">Nails Gel</h3>
+  <p class="text-sm text-charcoal-600 mt-1">Des poses d’ongles en gel impeccables pour des mains élégantes et soignées.</p>
+</article>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-sand-50/80 backdrop-blur supports-[backdrop-filter]:bg-sand-50/65 shadow-soft">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-sand-200 ring-2 ring-white flex items-center justify-center">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-charcoal-800">
-              <path d="M6 12c2.5-1.5 4.5-5 6-10 1.5 5 3.5 8.5 6 10-2.5 1.5-4.5 5-6 10-1.5-5-3.5-8.5-6-10Z" stroke="currentColor" stroke-width="1.2"/>
-            </svg>
-          </div>
-          <span class="font-serif text-xl tracking-wide">Emma Nails</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-8 text-sm">
-          <a href="#services" class="hover:text-accent">Services</a>
-          <a href="#pricing" class="hover:text-accent">Pricing</a>
-          <a href="#gallery" class="hover:text-accent">Gallery</a>
-          <a href="#team" class="hover:text-accent">Team</a>
-          <a href="#faq" class="hover:text-accent">FAQ</a>
-          <a href="#contact" class="hover:text-accent">Contact</a>
-        </nav>
-        <div class="hidden md:flex items-center gap-3">
-          <a href="https://wa.me/0000000000" class="hidden lg:inline-flex items-center gap-2 rounded-full border border-blush-300 px-4 py-2 text-sm hover:bg-blush-50">
-            <span>WhatsApp</span>
-          </a>
-          <a href="#booking" class="inline-flex items-center gap-2 rounded-full bg-charcoal-900 text-white px-4 py-2 text-sm hover:bg-charcoal-800">
-            <span>Book Now</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-4 h-4"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md ring-1 ring-sand-300">
-          <span class="sr-only">Open menu</span>
-          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-sand-300 bg-sand-50">
-      <nav class="px-4 py-3 space-y-2">
-        <a href="#services" class="block py-2">Services</a>
-        <a href="#pricing" class="block py-2">Pricing</a>
-        <a href="#gallery" class="block py-2">Gallery</a>
-        <a href="#team" class="block py-2">Team</a>
-        <a href="#faq" class="block py-2">FAQ</a>
-        <a href="#contact" class="block py-2">Contact</a>
-        <a href="#booking" class="block py-2 font-medium text-charcoal-900">Book Now</a>
-      </nav>
-    </div>
-  </header>
+<article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
+<img alt="Gel BIAB" class="w-full h-full object-cover" src="/gallery/pedicure.jpg"/>
+</div>
+<h3 class="mt-4 font-medium text-lg">Pédicure</h3>
+<p class="text-sm text-charcoal-600 mt-1">Offrez à vos pieds un soin complet pour douceur, beauté et bien-être.</p>
+</article>
 
-  <!-- Hero -->
-  <section class="relative bg-hero-texture bg-cover bg-center">
-    <div class="absolute inset-0" aria-hidden="true"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="py-20 sm:py-28 md:py-32 text-white">
-        <span class="inline-block px-3 py-1 rounded-full bg-sand-50/20 text-xs tracking-wide mb-5">New • Autumn Palette</span>
-        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">Elegance at your fingertips</h1>
-        <p class="mt-4 max-w-2xl text-white/90">Premium manicures, gel & BIAB, bespoke nail art, and spa pedicures. Relaxed vibes, flawless finish.</p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="#booking" class="inline-flex items-center justify-center rounded-full bg-sand-200 text-charcoal-900 px-6 py-3 font-medium hover:bg-sand-200 shadow-soft">Book an appointment</a>
-          <a href="#services" class="inline-flex items-center justify-center rounded-full bg-sand-50/10 px-6 py-3 font-medium ring-1 ring-white/40 hover:bg-sand-50/20">Explore services</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
+<img alt="Pedicure" class="w-full h-full object-cover" src="gallery/brows.jpg"/>
+</div>
+<h3 class="mt-4 font-medium text-lg">Brows</h3>
+<p class="text-sm text-charcoal-600 mt-1">Restructuration et mise en valeur de vos sourcils pour un regard harmonieux.</p>
+</article>
 
-  <!-- Trust badges -->
-  <section class="py-10 sm:py-12 bg-sand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-      <div class="p-4">
-        <p class="text-2xl">★ ★ ★ ★ ★</p>
-        <p class="text-sm text-charcoal-600 mt-1">500+ Five‑star reviews</p>
-      </div>
-      <div class="p-4">
-        <p class="text-2xl">100% Vegan</p>
-        <p class="text-sm text-charcoal-600 mt-1">Cruelty‑free brands</p>
-      </div>
-      <div class="p-4">
-        <p class="text-2xl">BIAB • Gel</p>
-        <p class="text-sm text-charcoal-600 mt-1">Long‑lasting sets</p>
-      </div>
-      <div class="p-4">
-        <p class="text-2xl">Hygiene+</p>
-        <p class="text-sm text-charcoal-600 mt-1">Medical‑grade tools</p>
-      </div>
-    </div>
-  </section>
+<article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
+<img alt="Nail art" class="w-full h-full object-cover" src="/gallery/lashes.jpg"/>
+</div>
+<h3 class="mt-4 font-medium text-lg">Lashes</h3>
+<p class="text-sm text-charcoal-600 mt-1">Extensions et rehaussements de cils pour un regard intense et naturel.</p>
+</article>
 
-  <!-- Services -->
-  <section id="services" class="py-16 sm:py-20 bg-sand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-end sm:justify-between">
-        <div>
-          <h2 class="font-serif text-3xl sm:text-4xl">Our Services</h2>
-          <p class="text-charcoal-600 mt-2 max-w-2xl">From quick tidy‑ups to show‑stopping sets. Choose the finish and length; we’ll handle the shine.</p>
-        </div>
-        <a href="#pricing" class="mt-4 sm:mt-0 inline-flex items-center gap-2 text-charcoal-800 hover:underline">See pricing
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
+<article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
+<img alt="Care" class="w-full h-full object-cover" src="gallery/training.jpg"/>
+</div>
+<h3 class="mt-4 font-medium text-lg">Formation Disponible</h3>
+<p class="text-sm text-charcoal-600 mt-1">Apprenez les techniques professionnelles et lancez-vous dans la beauté avec nos formations certifiées.</p>
+</article>
 
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card -->
-        <article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
-          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
-            <img alt="Manicure" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1200&auto=format&fit=crop" />
-          </div>
-          <h3 class="mt-4 font-medium text-lg">Classic Manicure</h3>
-          <p class="text-sm text-charcoal-600 mt-1">Shape, cuticle care, buff & polish. French optional.</p>
-        </article>
-        
-        <article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
-          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
-            <img alt="Gel BIAB" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1582092728063-98b69a6584b5?q=80&w=1200&auto=format&fit=crop" />
-          </div>
-          <h3 class="mt-4 font-medium text-lg">BIAB & Gel Extensions</h3>
-          <p class="text-sm text-charcoal-600 mt-1">Strengthening overlays and sculpted length with superior durability.</p>
-        </article>
+<article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
+<div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
+<img alt="Brows" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1626178793925-0ab6d7e4c7f1?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
+</div>
+<h3 class="mt-4 font-medium text-lg">Add‑ons</h3>
+<p class="text-sm text-charcoal-600 mt-1">French tips, chrome, hand massage, nail repair &amp; more.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Pricing -->
+<!-- Pricing (LAD palette) -->
+<section class="py-20 bg-sand-50" id="tarifs">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-serif text-charcoal-900 tracking-tight">Tarifs</h2>
+<p class="mt-3 text-charcoal-600">Quatre catégories claires pour vous aider à choisir.</p>
+</div>
+<!-- Category Filter -->
+<div class="mb-10 flex flex-wrap items-center justify-center gap-3">
+<button aria-pressed="true" class="filter-btn px-4 py-2 rounded-full ring-1 ring-sand-300 text-charcoal-700 bg-white hover:bg-sand-100 data-[active=true]:bg-accent data-[active=true]:text-white data-[active=true]:ring-accent" data-filter="all" type="button">Tout</button>
+<button aria-pressed="false" class="filter-btn px-4 py-2 rounded-full ring-1 ring-sand-300 text-charcoal-700 bg-white hover:bg-sand-100" data-filter="manicure" type="button">Manicure</button>
+<button aria-pressed="false" class="filter-btn px-4 py-2 rounded-full ring-1 ring-sand-300 text-charcoal-700 bg-white hover:bg-sand-100" data-filter="pedicure" type="button">Pédicure</button>
+<button aria-pressed="false" class="filter-btn px-4 py-2 rounded-full ring-1 ring-sand-300 text-charcoal-700 bg-white hover:bg-sand-100" data-filter="nail-art" type="button">Nail Art</button>
+<button aria-pressed="false" class="filter-btn px-4 py-2 rounded-full ring-1 ring-sand-300 text-charcoal-700 bg-white hover:bg-sand-100" data-filter="brows" type="button">Brows</button>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Manicure -->
+<div class="price-card bg-white/70 backdrop-blur rounded-2xl p-8 shadow-soft border border-sand-300" data-category="manicure">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-serif text-charcoal-900">Manicure</h3>
+<span class="inline-flex items-center rounded-full px-3 py-1 text-sm bg-accent/10 text-accent ring-1 ring-accent/20">Ongles</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Pose complète en gel</span>
+<span class="font-semibold text-charcoal-900">60€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Gel sur ongles naturels</span>
+<span class="font-semibold text-charcoal-900">50€</span>
+</li>
+<li class="flex items-baseline justify-between">
+<span class="text-charcoal-800">Dépose</span>
+<span class="font-semibold text-charcoal-900">15€</span>
+</li>
+</ul>
+</div>
+<!-- Pédicure -->
+<div class="price-card bg-white/70 backdrop-blur rounded-2xl p-8 shadow-soft border border-sand-300" data-category="pedicure">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-serif text-charcoal-900">Pédicure</h3>
+<span class="inline-flex items-center rounded-full px-3 py-1 text-sm bg-accent/10 text-accent ring-1 ring-accent/20">Pieds</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Pose Biab</span>
+<span class="font-semibold text-charcoal-900">40€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Reconstruction gel</span>
+<span class="font-semibold text-charcoal-900">5€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Dépose</span>
+<span class="font-semibold text-charcoal-900">15€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Soin Spa <span class="text-charcoal-500 text-sm">(anti‑callosités, gommage, masque)</span></span>
+<span class="font-semibold text-charcoal-900">30€</span>
+</li>
+<li class="flex items-baseline justify-between">
+<span class="text-charcoal-800">Soin Spa + pose Biab</span>
+<span class="font-semibold text-charcoal-900">60€</span>
+</li>
+</ul>
+</div>
+<!-- Nail Art -->
+<div class="price-card bg-white/70 backdrop-blur rounded-2xl p-8 shadow-soft border border-sand-300" data-category="nail-art">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-serif text-charcoal-900">Nail Art</h3>
+<span class="inline-flex items-center rounded-full px-3 py-1 text-sm bg-accent/10 text-accent ring-1 ring-accent/20">Options</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">French</span>
+<span class="font-semibold text-charcoal-900">5€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Design sur french</span>
+<span class="font-semibold text-charcoal-900">10€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Effet chrome</span>
+<span class="font-semibold text-charcoal-900">5€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Effet 3D <span class="text-charcoal-500 text-sm">(par ongle)</span></span>
+<span class="font-semibold text-charcoal-900">1€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Création 3D</span>
+<span class="font-semibold text-charcoal-900">5€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Strass / Stickers <span class="text-charcoal-500 text-sm">(par ongle)</span></span>
+<span class="font-semibold text-charcoal-900">1€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Airbrush ½ couleur(s)</span>
+<span class="font-semibold text-charcoal-900">5€</span>
+</li>
+<li class="flex items-baseline justify-between">
+<span class="text-charcoal-800">Airbrush 3/+ couleurs</span>
+<span class="font-semibold text-charcoal-900">10€</span>
+</li>
+</ul>
+</div>
+<!-- Brows -->
+<div class="price-card bg-white/70 backdrop-blur rounded-2xl p-8 shadow-soft border border-sand-300" data-category="brows">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-serif text-charcoal-900">Brows</h3>
+<span class="inline-flex items-center rounded-full px-3 py-1 text-sm bg-accent/10 text-accent ring-1 ring-accent/20">Sourcils</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">BrowLift</span>
+<span class="font-semibold text-charcoal-900">40€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Teinture</span>
+<span class="font-semibold text-charcoal-900">20€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Restructuration à la cire</span>
+<span class="font-semibold text-charcoal-900">15€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">BrowLift &amp; Teinture</span>
+<span class="font-semibold text-charcoal-900">50€</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-sand-300/70 pb-3">
+<span class="text-charcoal-800">Teinture &amp; épilation</span>
+<span class="font-semibold text-charcoal-900">30€</span>
+</li>
+<li class="flex items-baseline justify-between">
+<span class="text-charcoal-800">BrowLift &amp; Teinture &amp; épilation</span>
+<span class="font-semibold text-charcoal-900">60€</span>
+</li>
+</ul>
+</div>
+</div>
+<p class="mt-10 text-sm text-charcoal-600 bg-sand-100 border border-sand-300 rounded-xl p-4">
+<span class="font-semibold text-charcoal-900">Supplément :</span>
+      Pour tout rendez‑vous demandé pendant les congés (lundi et dimanche), un supplément de <span class="font-semibold">20€</span> est ajouté au prix de la prestation.
+    </p>
+</div>
+</section>
+<!-- Gallery -->
+<section class="py-16 sm:py-20 bg-sand-50" id="gallery">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="sm:flex sm:items-end sm:justify-between">
+<div>
+<h2 class="font-serif text-3xl sm:text-4xl">Gallery</h2>
+<p class="text-charcoal-600 mt-2">A few of our recent sets — swipe on mobile.</p>
+</div>
+<div class="mt-4 sm:mt-0 text-sm text-charcoal-600"><a href="https://www.instagram.com/es_.studioo/">Follow us @Emmanails</a></div>
+</div>
+<div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+<!-- 12 images -->
+<img alt="Nail set 1" class="rounded-xl object-cover aspect-square" src="gallery/brows.jpg"/>
+<img alt="Nail set 2" class="rounded-xl object-cover aspect-square" src="gallery/formation.jpg"/>
+<img alt="Nail set 3" class="rounded-xl object-cover aspect-square" src="gallery/gallery1.jpg"/>
+<img alt="Nail set 4" class="rounded-xl object-cover aspect-square" src="gallery/gallery2.jpg"/>
+<img alt="Nail set 5" class="rounded-xl object-cover aspect-square" src="gallery/gallery4.jpg"/>
+<img alt="Nail set 6" class="rounded-xl object-cover aspect-square" src="gallery/lashes.jpg"/>
+<img alt="Nail set 7" class="rounded-xl object-cover aspect-square" src="gallery/nailsSqure.jpg"/>
+<img alt="Nail set 8" class="rounded-xl object-cover aspect-square" src="gallery/pedicure.jpg"/>
+<img alt="Nail set 9" class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1556228453-efd1ff0a11f0?q=80&amp;w=600&amp;auto=format&amp;fit=crop"/>
+<img alt="Nail set 10" class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1604654894611-697ef5328bff?q=80&amp;w=600&amp;auto=format&amp;fit=crop"/>
+<img alt="Nail set 11" class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1603569283847-2f9b5a3228e3?q=80&amp;w=600&amp;auto=format&amp;fit=crop"/>
+<img alt="Nail set 12" class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1604908554041-9e2f4a9487a8?q=80&amp;w=600&amp;auto=format&amp;fit=crop"/>
+</div>
+</div>
+</section>
+<!-- Team -->
+<section class="py-16 sm:py-20 bg-sand-50" id="team">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-serif text-3xl sm:text-4xl">Meet the Team</h2>
+<p class="text-charcoal-600 mt-2 max-w-2xl">Friendly, qualified techs obsessed with detail and nail health.</p>
+<div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
+<img alt="Artist 1" class="w-full aspect-[4/3] object-cover rounded-xl" src=""/>
+<h3 class="mt-4 font-medium">Emma</h3>
+<p class="text-sm text-charcoal-600">Big boss</p>
+</div>
+<div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
+<img alt="Artist 2" class="w-full aspect-[4/3] object-cover rounded-xl" src="gallery/arber.jpg"/>
+<h3 class="mt-4 font-medium">Arber</h3>
+<p class="text-sm text-charcoal-600">BGS • LFC  &amp; YNWA</p>
+</div>
+<div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
+<img alt="Artist 3" class="w-full aspect-[4/3] object-cover rounded-xl" src="https://images.unsplash.com/photo-1531123414780-f74241b3e22d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
+<h3 class="mt-4 font-medium">Ava</h3>
+<p class="text-sm text-charcoal-600">Spa pedicures • Bold designs</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-16 sm:py-20 bg-sand-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-serif text-3xl sm:text-4xl">What clients say</h2>
+<div class="mt-8 grid md:grid-cols-3 gap-6">
+<figure class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300 shadow-soft">
+<blockquote class="text-charcoal-700">“The BIAB set lasted 4+ weeks — shape is perfect and cuticles pristine.”</blockquote>
+<figcaption class="mt-3 text-sm text-charcoal-600">— Emma V.</figcaption>
+</figure>
+<figure class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300 shadow-soft">
+<blockquote class="text-charcoal-700">“Super clean studio and the nicest team. My go‑to for chrome nails.”</blockquote>
+<figcaption class="mt-3 text-sm text-charcoal-600">— Sofia R.</figcaption>
+</figure>
+<figure class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300 shadow-soft">
+<blockquote class="text-charcoal-700">“Pedicure heaven. Massage chair + flawless gel toes… I’m obsessed.”</blockquote>
+<figcaption class="mt-3 text-sm text-charcoal-600">— Clara M.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<!-- Booking CTA -->
+<section class="py-16 sm:py-20 bg-gradient-to-b from-sand-50 to-sand-100" id="booking">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="font-serif text-3xl sm:text-4xl">Ready to glow?</h2>
+<p class="text-charcoal-700 mt-2">Pick a time that suits you. We’ll confirm instantly.</p>
+<div class="mt-6 grid sm:grid-cols-2 gap-3 max-w-xl mx-auto">
+<a class="inline-flex items-center justify-center gap-2 rounded-xl bg-charcoal-900 text-white px-6 py-3 font-medium hover:bg-charcoal-800" href="https://wa.me/+32492793458">
+  <i class="bi bi-telephone-fill text-xl"></i>
+  Call to book
+</a>
 
-        <article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
-          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
-            <img alt="Pedicure" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1200&auto=format&fit=crop" />
-          </div>
-          <h3 class="mt-4 font-medium text-lg">Spa Pedicure</h3>
-          <p class="text-sm text-charcoal-600 mt-1">Exfoliation, mask & massage, finished with gel polish that lasts.</p>
-        </article>
 
-        <article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
-          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
-            <img alt="Nail art" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1604654894611-697ef5328bff?q=80&w=1200&auto=format&fit=crop" />
-          </div>
-          <h3 class="mt-4 font-medium text-lg">Custom Nail Art</h3>
-          <p class="text-sm text-charcoal-600 mt-1">Minimal lines or full artwork. Bring inspo – we’ll create it.</p>
-        </article>
+<a class="inline-flex items-center justify-center gap-2 rounded-xl bg-sand-50 text-charcoal-900 px-6 py-3 font-medium ring-1 ring-sand-300 hover:bg-sand-50" href="https://salonkee.be/salon/es-studio?lang=fr">
+  <i class="bi bi-calendar-check text-xl"></i>
+  Online booking
+</a>
+</section>
 
-        <article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
-          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
-            <img alt="Care" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556228453-efd1ff0a11f0?q=80&w=1200&auto=format&fit=crop" />
-          </div>
-          <h3 class="mt-4 font-medium text-lg">Nail Rehab</h3>
-          <p class="text-sm text-charcoal-600 mt-1">IBX strengthening & hydration for damaged nails between sets.</p>
-        </article>
-
-        <article class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
-          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-sand-100">
-            <img alt="Brows" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1626178793925-0ab6d7e4c7f1?q=80&w=1200&auto=format&fit=crop" />
-          </div>
-          <h3 class="mt-4 font-medium text-lg">Add‑ons</h3>
-          <p class="text-sm text-charcoal-600 mt-1">French tips, chrome, hand massage, nail repair & more.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing" class="py-16 sm:py-20 bg-sand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-serif text-3xl sm:text-4xl">Pricing</h2>
-      <p class="text-charcoal-600 mt-2">Transparent, fair, and flexible. All prices include aftercare oil.</p>
-
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <!-- Price Card -->
-        <div class="rounded-2xl ring-1 ring-sand-300 bg-sand-50 p-6 flex flex-col">
-          <h3 class="text-lg font-medium">Essentials</h3>
-          <p class="text-sm text-charcoal-600">For tidy, natural nails</p>
-          <p class="mt-4 text-4xl font-serif">€25</p>
-          <ul class="mt-4 space-y-2 text-sm">
-            <li>• Classic manicure</li>
-            <li>• Cuticle care</li>
-            <li>• Polish or buff</li>
-          </ul>
-          <a href="#booking" class="mt-6 inline-flex justify-center rounded-full bg-charcoal-900 text-white px-5 py-2 text-sm hover:bg-charcoal-800">Book Essentials</a>
-        </div>
-
-        <div class="rounded-2xl ring-2 ring-accent bg-sand-50 p-6 shadow-soft relative flex flex-col">
-          <span class="absolute -top-3 right-4 text-xs bg-sand-200 text-charcoal-900 px-2 py-1 rounded-full">Popular</span>
-          <h3 class="text-lg font-medium">BIAB Overlay</h3>
-          <p class="text-sm text-charcoal-600">Strength + long‑lasting shine</p>
-          <p class="mt-4 text-4xl font-serif">€55</p>
-          <ul class="mt-4 space-y-2 text-sm">
-            <li>• Builder base (BIAB)</li>
-            <li>• Shape & cuticle care</li>
-            <li>• Gel color (1–2)</li>
-          </ul>
-          <a href="#booking" class="mt-6 inline-flex justify-center rounded-full bg-charcoal-900 text-white px-5 py-2 text-sm hover:bg-charcoal-800">Book BIAB</a>
-        </div>
-
-        <div class="rounded-2xl ring-1 ring-sand-300 bg-sand-50 p-6 flex flex-col">
-          <h3 class="text-lg font-medium">Gel Extensions</h3>
-          <p class="text-sm text-charcoal-600">Sculpted length, custom shape</p>
-          <p class="mt-4 text-4xl font-serif">€75</p>
-          <ul class="mt-4 space-y-2 text-sm">
-            <li>• New set or refill</li>
-            <li>• 1–2 simple nail art</li>
-            <li>• Aftercare kit</li>
-          </ul>
-          <a href="#booking" class="mt-6 inline-flex justify-center rounded-full bg-charcoal-900 text-white px-5 py-2 text-sm hover:bg-charcoal-800">Book Extensions</a>
-        </div>
-      </div>
-      <p class="text-xs text-charcoal-500 mt-3">Extras: French +€10 · Chrome +€10 · Detailed nail art +€5 per nail · Repair +€7</p>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="py-16 sm:py-20 bg-sand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-end sm:justify-between">
-        <div>
-          <h2 class="font-serif text-3xl sm:text-4xl">Gallery</h2>
-          <p class="text-charcoal-600 mt-2">A few of our recent sets — swipe on mobile.</p>
-        </div>
-        <div class="mt-4 sm:mt-0 text-sm text-charcoal-600">Follow us @Emmanails</div>
-      </div>
-
-      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-        <!-- 12 images -->
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=600&auto=format&fit=crop" alt="Nail set 1"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1512203492609-8f8b7f1a1f84?q=80&w=600&auto=format&fit=crop" alt="Nail set 2"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1604654894278-9f0a9a9c2a67?q=80&w=600&auto=format&fit=crop" alt="Nail set 3"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1604654894643-01652dc96d41?q=80&w=600&auto=format&fit=crop" alt="Nail set 4"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1582092728063-98b69a6584b5?q=80&w=600&auto=format&fit=crop" alt="Nail set 5"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=600&auto=format&fit=crop" alt="Nail set 6"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1626178793925-0ab6d7e4c7f1?q=80&w=600&auto=format&fit=crop" alt="Nail set 7"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop" alt="Nail set 8"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1556228453-efd1ff0a11f0?q=80&w=600&auto=format&fit=crop" alt="Nail set 9"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1604654894611-697ef5328bff?q=80&w=600&auto=format&fit=crop" alt="Nail set 10"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1603569283847-2f9b5a3228e3?q=80&w=600&auto=format&fit=crop" alt="Nail set 11"/>
-        <img class="rounded-xl object-cover aspect-square" src="https://images.unsplash.com/photo-1604908554041-9e2f4a9487a8?q=80&w=600&auto=format&fit=crop" alt="Nail set 12"/>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team -->
-  <section id="team" class="py-16 sm:py-20 bg-sand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-serif text-3xl sm:text-4xl">Meet the Team</h2>
-      <p class="text-charcoal-600 mt-2 max-w-2xl">Friendly, qualified techs obsessed with detail and nail health.</p>
-
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
-          <img class="w-full aspect-[4/3] object-cover rounded-xl" src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?q=80&w=1200&auto=format&fit=crop" alt="Artist 1" />
-          <h3 class="mt-4 font-medium">Maya</h3>
-          <p class="text-sm text-charcoal-600">BIAB specialist • Minimal nail art</p>
-        </div>
-        <div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
-          <img class="w-full aspect-[4/3] object-cover rounded-xl" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop" alt="Artist 2" />
-          <h3 class="mt-4 font-medium">Lina</h3>
-          <p class="text-sm text-charcoal-600">Sculpted gel • French & chrome</p>
-        </div>
-        <div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
-          <img class="w-full aspect-[4/3] object-cover rounded-xl" src="https://images.unsplash.com/photo-1531123414780-f74241b3e22d?q=80&w=1200&auto=format&fit=crop" alt="Artist 3" />
-          <h3 class="mt-4 font-medium">Ava</h3>
-          <p class="text-sm text-charcoal-600">Spa pedicures • Bold designs</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="py-16 sm:py-20 bg-sand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-serif text-3xl sm:text-4xl">What clients say</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <figure class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300 shadow-soft">
-          <blockquote class="text-charcoal-700">“The BIAB set lasted 4+ weeks — shape is perfect and cuticles pristine.”</blockquote>
-          <figcaption class="mt-3 text-sm text-charcoal-600">— Emma V.</figcaption>
-        </figure>
-        <figure class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300 shadow-soft">
-          <blockquote class="text-charcoal-700">“Super clean studio and the nicest team. My go‑to for chrome nails.”</blockquote>
-          <figcaption class="mt-3 text-sm text-charcoal-600">— Sofia R.</figcaption>
-        </figure>
-        <figure class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300 shadow-soft">
-          <blockquote class="text-charcoal-700">“Pedicure heaven. Massage chair + flawless gel toes… I’m obsessed.”</blockquote>
-          <figcaption class="mt-3 text-sm text-charcoal-600">— Clara M.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking CTA -->
-  <section id="booking" class="py-16 sm:py-20 bg-gradient-to-b from-sand-50 to-sand-100">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-serif text-3xl sm:text-4xl">Ready to glow?</h2>
-      <p class="text-charcoal-700 mt-2">Pick a time that suits you. We’ll confirm instantly.</p>
-
-      <div class="mt-6 grid sm:grid-cols-2 gap-3 max-w-xl mx-auto">
-        <a href="tel:+32000000000" class="inline-flex items-center justify-center gap-2 rounded-xl bg-charcoal-900 text-white px-6 py-3 font-medium hover:bg-charcoal-800">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.15 9.81 19.79 19.79 0 0 1 .08 1.18 2 2 0 0 1 2.06-.99h3a2 2 0 0 1 2 1.72c.12.89.31 1.76.57 2.6a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.88 6.88l1.27-1.27a2 2 0 0 1 2.11-.45c.84.26 1.71.45 2.6.57A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="1.2"/></svg>
-          Call to book
-        </a>
-        <a href="https://wa.me/0000000000" class="inline-flex items-center justify-center gap-2 rounded-xl bg-sand-50 text-charcoal-900 px-6 py-3 font-medium ring-1 ring-sand-300 hover:bg-sand-50">
-          <svg class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.11 17.46c-.28-.14-1.64-.81-1.9-.9-.26-.1-.45-.14-.65.14-.2.27-.75.9-.92 1.1-.17.2-.34.2-.61.07-1.64-.81-2.71-1.45-3.8-3.3-.29-.5.29-.46.83-1.54.09-.2.05-.37-.03-.51-.1-.14-.65-1.56-.89-2.13-.23-.55-.47-.47-.65-.47h-.56c-.19 0-.5.07-.76.37-.26.28-1 1-1 2.43 0 1.42 1.03 2.8 1.18 3 .14.2 2.03 3.1 4.92 4.34.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.56-.08 1.64-.67 1.87-1.32.23-.66.23-1.22.16-1.33-.06-.12-.24-.19-.52-.32Z"/><path d="M16.01 2.67c-7.35 0-13.33 5.98-13.33 13.33 0 2.36.62 4.71 1.78 6.77L2.67 29.33l6.77-1.78c6.1 3.37 13.76 1.1 17.13-5.01 3.37-6.1 1.1-13.76-5.01-17.13A13.29 13.29 0 0 0 16.01 2.67Zm7.89 20.91c-2.12 2.13-4.99 3.33-8 3.33a11.29 11.29 0 0 1-5.75-1.57l-.41-.25-4.02 1.06 1.08-3.92-.26-.41a11.33 11.33 0 1 1 17.36 3.76Z"/></svg>
-          WhatsApp booking
-        </a>
-      </div>
-
-      <p class="text-xs text-charcoal-600 mt-4">Prefer online scheduling? Connect your booking link here (Fresha, Treatwell, Calendly).</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-16 sm:py-20 bg-sand-50">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-serif text-3xl sm:text-4xl">FAQ</h2>
-      <div class="mt-6 divide-y divide-ink-100">
-        <details class="group py-4">
-          <summary class="flex cursor-pointer list-none items-center justify-between text-charcoal-900 font-medium">
+<!-- FAQ -->
+<section class="py-16 sm:py-20 bg-sand-50" id="faq">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-serif text-3xl sm:text-4xl">FAQ</h2>
+<div class="mt-6 divide-y divide-ink-100">
+<details class="group py-4">
+<summary class="flex cursor-pointer list-none items-center justify-between text-charcoal-900 font-medium">
             How long does a BIAB set last?
-            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
-          </summary>
-          <p class="mt-2 text-charcoal-700">Most clients refill every 3–4 weeks depending on growth and lifestyle.</p>
-        </details>
-        <details class="group py-4">
-          <summary class="flex cursor-pointer list-none items-center justify-between text-charcoal-900 font-medium">
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<p class="mt-2 text-charcoal-700">Most clients refill every 3–4 weeks depending on growth and lifestyle.</p>
+</details>
+<details class="group py-4">
+<summary class="flex cursor-pointer list-none items-center justify-between text-charcoal-900 font-medium">
             Do you offer nail art?
-            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
-          </summary>
-          <p class="mt-2 text-charcoal-700">Yes! From minimal lines to advanced designs. Bring references for a quote.</p>
-        </details>
-        <details class="group py-4">
-          <summary class="flex cursor-pointer list-none items-center justify-between text-charcoal-900 font-medium">
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<p class="mt-2 text-charcoal-700">Yes! From minimal lines to advanced designs. Bring references for a quote.</p>
+</details>
+<details class="group py-4">
+<summary class="flex cursor-pointer list-none items-center justify-between text-charcoal-900 font-medium">
             What’s your hygiene policy?
-            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
-          </summary>
-          <p class="mt-2 text-charcoal-700">We use medical‑grade sterilization and single‑use files & buffers.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<p class="mt-2 text-charcoal-700">We use medical‑grade sterilization and single‑use files &amp; buffers.</p>
+</details>
+</div>
+</div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 sm:py-20 bg-sand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
-      <div>
-        <h2 class="font-serif text-3xl sm:text-4xl">Visit us</h2>
-        <p class="text-charcoal-700 mt-2">Rue Example 12, 1000 Brussels, Belgium</p>
-        <div class="mt-4 space-y-1 text-sm text-charcoal-700">
-          <p><span class="font-medium">Open:</span> Mon–Sat 10:00–19:00 · Sun 11:00–16:00</p>
-          <p><span class="font-medium">Phone:</span> <a class="underline" href="tel:+32000000000">+32 000 00 00 00</a></p>
-          <p><span class="font-medium">Email:</span> <a class="underline" href="mailto:hello@Emmanails.com">hello@Emmanails.com</a></p>
-        </div>
-        <div class="mt-6 aspect-video rounded-2xl overflow-hidden ring-1 ring-sand-300">
-          <iframe title="Google Map" class="w-full h-full" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Grand%20Place,%20Brussels+(Emma%20Nails)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <div class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
-        <h3 class="text-lg font-medium">Send a message</h3>
-        <form class="mt-4 space-y-4" id="contactForm">
-          <div>
-            <label class="block text-sm mb-1" for="name">Name</label>
-            <input id="name" name="name" required class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300" />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="email">Email</label>
-            <input id="email" name="email" type="email" required class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300" />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="service">Service</label>
-            <select id="service" name="service" class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300">
-              <option>Classic Manicure</option>
-              <option>BIAB Overlay</option>
-              <option>Gel Extensions</option>
-              <option>Spa Pedicure</option>
-              <option>Custom Nail Art</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="message">Message</label>
-            <textarea id="message" name="message" rows="4" class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300"></textarea>
-          </div>
-          <button type="submit" class="w-full rounded-xl bg-charcoal-900 text-white px-6 py-3 font-medium hover:bg-charcoal-800">Send</button>
-          <p id="formNote" class="text-xs text-charcoal-600">This demo submits via mailto. Replace with your backend or Formspree/Tally link.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-charcoal-900 text-charcoal-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-sand-200"></div>
-            <span class="font-serif text-lg">Emma Nails</span>
-          </div>
-          <p class="text-sm text-charcoal-300 mt-2">Elegant nails, kind products, meticulous care.</p>
-        </div>
-        <div>
-          <h4 class="font-medium">Explore</h4>
-          <ul class="mt-3 space-y-2 text-sm text-charcoal-300">
-            <li><a href="#services" class="hover:text-white">Services</a></li>
-            <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
-            <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
-            <li><a href="#faq" class="hover:text-white">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-medium">Contact</h4>
-          <ul class="mt-3 space-y-2 text-sm text-charcoal-300">
-            <li>Rue Example 12, 1000 Brussels</li>
-            <li><a href="tel:+32000000000" class="hover:text-white">+32 000 00 00 00</a></li>
-            <li><a href="mailto:hello@Emmanails.com" class="hover:text-white">hello@Emmanails.com</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-medium">Hours</h4>
-          <ul class="mt-3 space-y-1 text-sm text-charcoal-300">
-            <li>Mon–Sat: 10:00–19:00</li>
-            <li>Sun: 11:00–16:00</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-8 border-t border-white/10 pt-6 text-xs text-charcoal-400 flex flex-col sm:flex-row justify-between">
-        <p>© <span id="year"></span> Emma Nails. All rights reserved.</p>
-        <p>Site by You — replace images/links before going live.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+<!-- Contact -->
+<section class="py-16 sm:py-20 bg-sand-50" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
+<div>
+<h2 class="font-serif text-3xl sm:text-4xl">Visit us</h2>
+<p class="text-charcoal-700 mt-2">Chaussée De Mons 406, Anderlecht 1070</p>
+<div class="mt-4 space-y-1 text-sm text-charcoal-700">
+<p><span class="font-medium">Heures d'ouverture:</span> Mardi-Jeudi 10:00–16:30 · Vendredi 10:00–14:30 · Samedi 10:00–14:00</p>
+<p><span class="font-medium">Phone:</span> <a class="underline" href="tel:+32492793458">+32 492 79 34 58</a></p>
+<p><span class="font-medium">Email:</span> <a class="underline" href="mailto:hello@Emmanails.com">Emmashkodra@hotmail.com</a></p>
+</div>
+<div class="mt-6 aspect-video rounded-2xl overflow-hidden ring-1 ring-sand-300">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.7296130633695!2d4.314783876953674!3d50.83617205951576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c41af69931d7%3A0xd3e1e49e82952d36!2sChauss%C3%A9e%20de%20Mons%20406%2C%201070%20Anderlecht!5e0!3m2!1sfr!2sbe!4v1762206204796!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+<div class="bg-sand-50 rounded-2xl p-6 shadow-soft ring-1 ring-sand-300">
+<h3 class="text-lg font-medium">Send a message</h3>
+<form class="mt-4 space-y-4" id="contactForm">
+<div>
+<label class="block text-sm mb-1" for="name">Name</label>
+<input class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300" id="name" name="name" required=""/>
+</div>
+<div>
+<label class="block text-sm mb-1" for="email">Email</label>
+<input class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300" id="email" name="email" required="" type="email"/>
+</div>
+<div>
+<label class="block text-sm mb-1" for="service">Service</label>
+<select class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300" id="service" name="service">
+<option>Nails Gel</option>
+<option>Pédicure</option>
+<option>Brows</option>
+<option>Lashes</option>
+<option>Formation</option>
+</select>
+</div>
+<div>
+<label class="block text-sm mb-1" for="message">Message</label>
+<textarea class="w-full rounded-lg border border-sand-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sand-300" id="message" name="message" rows="4"></textarea>
+</div>
+<button class="w-full rounded-xl bg-charcoal-900 text-white px-6 py-3 font-medium hover:bg-charcoal-800" type="submit">Send</button>
+<p class="text-xs text-charcoal-600" id="formNote">This demo submits via mailto. Replace with your backend or Formspree/Tally link.</p>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-charcoal-900 text-charcoal-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-sand-200"></div>
+<span class="font-serif text-lg">ES Studio</span>
+</div>
+<p class="text-sm text-charcoal-300 mt-2">Elegant nails, kind products, meticulous care.</p>
+</div>
+<div>
+<h4 class="font-medium">Explore</h4>
+<ul class="mt-3 space-y-2 text-sm text-charcoal-300">
+<li><a class="hover:text-white" href="#services">Services</a></li>
+<li><a class="hover:text-white" href="#pricing">Pricing</a></li>
+<li><a class="hover:text-white" href="#gallery">Gallery</a></li>
+<li><a class="hover:text-white" href="#faq">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-medium">Contact</h4>
+<ul class="mt-3 space-y-2 text-sm text-charcoal-300">
+<li>Chaussée De Mons 406, Anderlecht 1070</li>
+<li><a class="hover:text-white" href="tel:+32 492 79 34 58">+32 492 79 34 58</a></li>
+<li><a class="hover:text-white" href="mailto:hello@Emmanails.com">Emmashkodra@hotmail.com</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-medium">Heures d'ouverture</h4>
+<ul class="mt-3 space-y-1 text-sm text-charcoal-300">
+<li>Mardi-Jeudi 10:00–16:30</li>
+<li>Vendredi 10:00–14:30</li>
+<li>Samedi 10:00–14:00</li>
+</ul>
+</div>
+</div>
+<div class="mt-8 border-t border-white/10 pt-6 text-xs text-charcoal-400 flex flex-col sm:flex-row justify-between">
+<p>© <span id="year"></span> ES Studio. All rights reserved.</p>
+<p>Site by You — replace images/links before going live.</p>
+</div>
+</div>
+</footer>
+<script>
     // Mobile menu toggle
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
@@ -507,5 +595,41 @@
       window.location.href = `mailto:hello@Emmanails.com?subject=${subject}&body=${body}`;
     });
   </script>
-</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = Array.from(document.querySelectorAll('#tarifs .filter-btn'));
+    const cards = Array.from(document.querySelectorAll('#tarifs .price-card'));
+
+    function setActive(btn) {
+      buttons.forEach(b => {
+        const active = b === btn;
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+        b.dataset.active = active ? 'true' : 'false';
+      });
+    }
+
+    function applyFilter(filter) {
+      cards.forEach(card => {
+        const match = (filter === 'all') || (card.dataset.category === filter);
+        card.style.display = match ? '' : 'none';
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setActive(btn);
+        applyFilter(btn.dataset.filter);
+      });
+    });
+
+    // Default to "all"
+    applyFilter('all');
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('#tarifs .price-card');
+  console.log('Price cards detected:', cards.length, Array.from(cards).map(c => c.dataset.category));
+});
+</script></body>
 </html>
