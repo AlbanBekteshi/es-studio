@@ -72,13 +72,9 @@
 <header class="sticky top-0 z-50 bg-sand-50/80 backdrop-blur supports-[backdrop-filter]:bg-sand-50/65 shadow-soft">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
-<a class="flex items-center gap-3" href="#">
-<div class="w-9 h-9 rounded-full bg-sand-200 ring-2 ring-white flex items-center justify-center">
-<svg class="w-5 h-5 text-charcoal-800" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12c2.5-1.5 4.5-5 6-10 1.5 5 3.5 8.5 6 10-2.5 1.5-4.5 5-6 10-1.5-5-3.5-8.5-6-10Z" stroke="currentColor" stroke-width="1.2"></path>
-</svg>
-</div>
-<span class="font-serif text-xl tracking-wide">ES Studio</span>
+<a href="#" class="flex items-center gap-2">
+  <img src="gallery/logo.jpg" alt="ES Studio Logo" class="h-9 w-auto rounded-full">
+  <span class="font-serif text-lg">ES Studio</span>
 </a>
 <nav class="hidden md:flex items-center gap-8 text-sm">
 <a class="hover:text-accent" href="#services">Services</a>
@@ -116,20 +112,53 @@
 </div>
 </header>
 <!-- Hero -->
-<section class="relative bg-hero-texture bg-cover bg-center">
-<div aria-hidden="true" class="absolute inset-0"></div>
-<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="py-20 sm:py-28 md:py-32 text-white">
-<span class="inline-block px-3 py-1 rounded-full bg-sand-50/20 text-xs tracking-wide mb-5">New • Autumn Palette</span>
-<h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">Elegance at your fingertips</h1>
-<p class="mt-4 max-w-2xl text-white/90">Nails gel, Pédicure, Brows, Lashes &amp; Formation Disponible.</p>
-<div class="mt-8 flex flex-col sm:flex-row gap-3">
-<a class="inline-flex items-center justify-center rounded-full bg-sand-200 text-charcoal-900 px-6 py-3 font-medium hover:bg-sand-200 shadow-soft" href="#booking">Book an appointment</a>
-<a class="inline-flex items-center justify-center rounded-full bg-sand-50/10 px-6 py-3 font-medium ring-1 ring-white/40 hover:bg-sand-50/20" href="#services">Explore services</a>
-</div>
-</div>
-</div>
+<!-- Hero (video background) -->
+<section class="relative">
+  <!-- Video background -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <video
+      class="w-full h-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="gallery/hero-poster.jpg"
+    >
+      <!-- WebM en premier (plus léger), MP4 en fallback -->
+      <source src="gallery/hero.mp4" type="video/mp4" />
+      <!-- Fallback image si la vidéo ne se charge pas -->
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+    <!-- Overlay sombre pour lisibilité du texte -->
+    <div class="absolute inset-0 bg-black/35"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-20 sm:py-28 md:py-32 text-white">
+      <span class="inline-block px-3 py-1 rounded-full bg-white/20 text-xs tracking-wide mb-5">
+        New • Autumn Palette
+      </span>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
+        Elegance at your fingertips
+      </h1>
+      <p class="mt-4 max-w-2xl text-white/90">
+        Nails gel, Pédicure, Brows, Lashes & Formation Disponible.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#booking"
+           class="inline-flex items-center justify-center rounded-full bg-sand-200 text-charcoal-900 px-6 py-3 font-medium hover:bg-sand-200 shadow-soft">
+          Book an appointment
+        </a>
+        <a href="#services"
+           class="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 font-medium ring-1 ring-white/40 hover:bg-white/20">
+          Explore services
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Trust badges -->
 <section class="py-10 sm:py-12 bg-sand-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
@@ -403,16 +432,8 @@
 <h3 class="mt-4 font-medium">Emma</h3>
 <p class="text-sm text-charcoal-600">Big boss</p>
 </div>
-<div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
-<img alt="Artist 2" class="w-full aspect-[4/3] object-cover rounded-xl" src="gallery/arber.jpg"/>
-<h3 class="mt-4 font-medium">Arber</h3>
-<p class="text-sm text-charcoal-600">BGS • LFC  &amp; YNWA</p>
-</div>
-<div class="bg-sand-50 rounded-2xl p-6 ring-1 ring-sand-300">
-<img alt="Artist 3" class="w-full aspect-[4/3] object-cover rounded-xl" src="https://images.unsplash.com/photo-1531123414780-f74241b3e22d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
-<h3 class="mt-4 font-medium">Ava</h3>
-<p class="text-sm text-charcoal-600">Spa pedicures • Bold designs</p>
-</div>
+
+
 </div>
 </div>
 </section>
@@ -486,7 +507,7 @@
 
 <!-- Contact -->
 <section class="py-16 sm:py-20 bg-sand-50" id="contact">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
+<div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
 <div>
 <h2 class="font-serif text-3xl sm:text-4xl">Visit us</h2>
 <p class="text-charcoal-700 mt-2">Chaussée De Mons 406, Anderlecht 1070</p>
